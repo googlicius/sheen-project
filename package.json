@@ -1,14 +1,16 @@
 {
-  "name": "SheenProject",
+  "name": "sheen-project",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug"
   },
   "dependencies": {
     "react": "16.6.1",
-    "react-native": "0.57.7"
+    "react-native": "0.57.7",
+    "react-native-navigation": "^2.1.3-patch.2"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
