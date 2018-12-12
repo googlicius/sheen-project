@@ -1,0 +1,23 @@
+{
+    "env": {
+        "react-native/react-native": true
+    },
+    "parser": "babel-eslint",
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "rules": {
+        "no-unused-vars": "off"
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        }
+    }
+}
