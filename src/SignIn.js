@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { View, Text, TextInput, Button } from 'react-native-ui-lib';
-import { View, Text, TextInput, Button, AsyncStorage, StyleSheet } from 'react-native';
+import { AsyncStorage, StyleSheet } from 'react-native';
+import { Container, Content, Form, Item, Label, Input, Button, Text } from 'native-base';
 import { USER_KEY } from './config';
 import { goHome } from './navigation';
 
@@ -27,28 +27,33 @@ export default class SignIn extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <TextInput
-                    style={styles.input}
-                    placeholder="Username"
-                    autoCapitalize="none"
-                    autoCorrect={false}
-                    placeholderTextColor='white'
-                    onChangeText={val => this.onChangeText('username', val)}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder='Password'
-                    autoCapitalize="none"
-                    secureTextEntry={true}
-                    placeholderTextColor='white'
-                    onChangeText={val => this.onChangeText('password', val)}
-                />
-                <Button
-                    title='Sign In'
-                    onPress={this.signIn}
-                />
-            </View>
+            <Container style={styles.container}>
+                <Content>
+                    <Form>
+                        <Item floatingLabel>
+                            <Label>Username</Label>
+                            <Input
+                                autoCapitalize="none"
+                                autoCorrect={false}
+                                onChangeText={val => this.onChangeText('username', val)}
+                            />
+                        </Item>
+
+                        <Item floatingLabel last>
+                            <Label>Password</Label>
+                            <Input
+                                autoCapitalize="none"
+                                autoCorrect={false}
+                                secureTextEntry={true}
+                                onChangeText={val => this.onChangeText('password', val)}
+                            />
+                        </Item>
+                        <Button style={{ margin: 10, marginTop: 40 }} block primary onPress={this.signIn}>
+                            <Text>Sign In</Text>
+                        </Button>
+                    </Form>
+                </Content>
+            </Container>
         )
     }
 }
