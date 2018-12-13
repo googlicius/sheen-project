@@ -37,7 +37,7 @@ export default class Home extends React.PureComponent {
     viewNextScreen = () => {
         Navigation.push(this.props.componentId, {
             component: {
-                name: 'Screen2'
+                name: 'ComponentList'
             }
         })
     }
@@ -52,7 +52,7 @@ export default class Home extends React.PureComponent {
                 />
                 <Button
                     onPress={this.viewNextScreen}
-                    title="View next screen"
+                    title="View Native Base Components"
                 />
             </View>
         )
