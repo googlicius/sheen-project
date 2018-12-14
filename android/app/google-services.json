@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1098949295566",
+    "firebase_url": "https://sheenproject-8fb44.firebaseio.com",
+    "project_id": "sheenproject-8fb44",
+    "storage_bucket": "sheenproject-8fb44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098949295566:android:64c428e8b38b1a81",
+        "android_client_info": {
+          "package_name": "com.sheenproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098949295566-3e5aa2jqnbtaeahg69kbbjbu16bf8a43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sheenproject",
+            "certificate_hash": "8c553a3cdd00ca4652fb7d62b729c356742e35aa"
+          }
+        },
+        {
+          "client_id": "1098949295566-admrqg075b6g2rbv6au148oo62uc1652.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAELdijPE1fQozKPveSIhCxoj2SN9_JPpQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098949295566-admrqg075b6g2rbv6au148oo62uc1652.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

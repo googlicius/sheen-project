@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { AsyncStorage, StyleSheet } from 'react-native';
+import { AsyncStorage, StyleSheet, View } from 'react-native';
 import { Container, Content, Form, Item, Label, Input, Button, Text } from 'native-base';
 import { USER_KEY } from './config';
 import { goHome } from './navigation';
+import GGSignInBtn from './components/gg-signin-btn';
 
 export default class SignIn extends Component {
     state = {
@@ -27,8 +28,12 @@ export default class SignIn extends Component {
 
     render() {
         return (
-            <Container style={styles.container}>
-                <Content>
+            <Container>
+                <Content contentContainerStyle={{flex:1,justifyContent: 'center'}}>
+                    <View>
+                        <Text style={styles.login_title}>ĐĂNG NHẬP</Text>
+                    </View>
+                    <GGSignInBtn />
                     <Form>
                         <Item floatingLabel>
                             <Label>Username</Label>
@@ -73,6 +78,15 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        // flexDirection: 'row'
+    },
+    login_title: {
+        fontSize: 20,
+        fontWeight: "bold",
+        textAlign: 'center'
+    },
+    eke: {
+        
     }
 })

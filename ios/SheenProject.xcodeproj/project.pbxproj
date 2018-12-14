@@ -54,6 +54,7 @@
 		842A8C7DC9CF402997FB15CC /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1FB6232CAF14DC788E65ED1 /* rubicon-icon-font.ttf */; };
 		624773BA02A34C91B9101635 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14A06C92EB614E28836CEFAB /* SimpleLineIcons.ttf */; };
 		D16660BD55894E2187A9773E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9C4B859F49843FB8B34017C /* Zocial.ttf */; };
+		E993FE20E925421B996FCF63 /* libRNGoogleSignin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9436D2279BF45848C9AAFD4 /* libRNGoogleSignin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -378,6 +379,8 @@
 		B1FB6232CAF14DC788E65ED1 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		14A06C92EB614E28836CEFAB /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A9C4B859F49843FB8B34017C /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DEFC6E19823944DD81556962 /* RNGoogleSignin.xcodeproj */ = {isa = PBXFileReference; name = "RNGoogleSignin.xcodeproj"; path = "../node_modules/react-native-google-signin/ios/RNGoogleSignin.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C9436D2279BF45848C9AAFD4 /* libRNGoogleSignin.a */ = {isa = PBXFileReference; name = "libRNGoogleSignin.a"; path = "libRNGoogleSignin.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +411,7 @@
 				3654BA01A0F0401891061060 /* libReactNativeNavigation.a in Frameworks */,
 				E16AF8C0392C463CB13ABB22 /* ReactNativeNavigationTests.xctest in Resources */,
 				1C4428E014F3470EBE183035 /* libreactnativeuilib.a in Frameworks */,
+				E993FE20E925421B996FCF63 /* libRNGoogleSignin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +600,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				71E071CADFF848BAAE83FFD9 /* ReactNativeNavigation.xcodeproj */,
 				AA5BC1BE0EBE4166990CDA98 /* reactnativeuilib.xcodeproj */,
+				DEFC6E19823944DD81556962 /* RNGoogleSignin.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1263,11 +1268,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1292,11 +1299,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Release;
@@ -1321,6 +1330,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1344,6 +1354,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Release;
@@ -1376,11 +1387,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1413,11 +1426,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Release;
@@ -1449,11 +1464,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Debug;
@@ -1485,11 +1502,13 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-navigation\lib\ios/**",
 					"$(SRCROOT)\..\node_modules\react-native-ui-lib\lib\ios\reactnativeuilib/**",
+					"$(SRCROOT)\..\node_modules\react-native-google-signin\ios\RNGoogleSignin",
 				);
 			};
 			name = Release;

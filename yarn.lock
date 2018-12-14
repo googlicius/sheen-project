@@ -5284,6 +5284,11 @@ react-native-easy-grid@0.2.0:
   dependencies:
     lodash "^4.11.1"
 
+react-native-google-signin@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-google-signin/-/react-native-google-signin-1.0.2.tgz#027b2bba3c03504170fdf6e44cd44bf65ecdbc7f"
+  integrity sha512-4HPPSecI29gX0Pu7h2E7ZYXnKO4r+6eh5f+Unm67liE1RfvCQfOqoDliPbK96Mb/91VgHwqyxi0sUEC4j54/AQ==
+
 react-native-interactable@1.0.0-alpha.1:
   version "1.0.0-alpha.1"
   resolved "https://registry.yarnpkg.com/react-native-interactable/-/react-native-interactable-1.0.0-alpha.1.tgz#6459bcc29b392a9671e644d03f1728f3bf3051b5"

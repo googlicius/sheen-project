@@ -3,6 +3,7 @@ package com.sheenproject;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -38,6 +39,7 @@ public class MainApplication extends NavigationApplication {
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
                 // eg. new VectorIconsPackage()
+                new RNGoogleSigninPackage() // <-- this needs to be in the list
         );
     }
 

@@ -4,6 +4,7 @@ import { AsyncStorage } from 'react-native';
 import PropTypes from 'prop-types';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { Options, Navigation } from 'react-native-navigation';
+import { GoogleSignin } from 'react-native-google-signin';
 import { USER_KEY } from './config';
 import { goToAuth } from './navigation';
 
@@ -25,9 +26,22 @@ export default class Home extends React.PureComponent {
         }
     }
 
+    isGoogleSignedIn = () => {
+        return GoogleSignin.isSignedIn();
+    }
+
+    logoutGoogle = async () => {
+        await GoogleSignin.revokeAccess();
+        await GoogleSignin.signOut();
+    }
+
     logout = async () => {
         try {
             await AsyncStorage.removeItem(USER_KEY);
+            if (await this.isGoogleSignedIn()) {
+                await this.logoutGoogle();
+                console.log("Google has signed out");
+            }
             goToAuth();
         } catch (error) {
             console.log('error signing out...: ', error);
