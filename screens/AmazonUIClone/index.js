@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Container, Content, Left, Body, Right, Header, Icon, Text, View, Button, Item, Input, Card, CardItem } from 'native-base';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
+import Swiper from 'react-native-swiper';
 import RecommendedCardItem from './components/RecommendedCardItem';
 
 export class AmazonUICloneScreen extends Component {
@@ -43,7 +44,16 @@ export class AmazonUICloneScreen extends Component {
                         </View>
                     </View>
 
-                    <View padder style={{ marginTop: 20 }}>
+                    <Swiper autoplay style={{ height: 100, marginTop: 10 }}>
+                        <View style={{ flex: 1 }}>
+                            <Image style={styles.swiper_image} source={require('./assets/swiper_2.jpg')} />
+                        </View>
+                        <View style={{ flex: 1 }}>
+                            <Image style={styles.swiper_image} source={require('./assets/swiper_3.jpg')} />
+                        </View>
+                    </Swiper>
+
+                    <View padder>
                         <CardItem header>
                             <Text>Your Recommendations</Text>
                         </CardItem>
@@ -93,5 +103,11 @@ const styles = StyleSheet.create({
         padding: 5,
         minWidth: 90,
         borderRadius: 4
+    },
+    swiper_image: {
+        flex: 1,
+        width: null,
+        height: null,
+        resizeMode: 'contain'
     }
 })
