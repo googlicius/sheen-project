@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AsyncStorage } from 'react-native';
+import { AsyncStorage, StyleSheet } from 'react-native';
 import { Container, Content, Button, Text } from 'native-base';
 
 export class HomeScreen extends Component {
@@ -14,14 +14,24 @@ export class HomeScreen extends Component {
         return (
             <Container>
                 <Content padder>
-                    <Button block light onPress={this._logOut}>
+                    <Button block light onPress={this._logOut} style={styles.button}>
                         <Text>Log out</Text>
                     </Button>
-                    <Button block onPress={() => this.props.navigation.navigate('ComponentList')}>
+                    <Button block onPress={() => this.props.navigation.navigate('ComponentList')} style={styles.button}>
                         <Text>List of components</Text>
+                    </Button>
+
+                    <Button block success onPress={() => this.props.navigation.navigate('AmazonUIClone')} style={{ ...styles.button, backgroundColor: "#3a455c" }}>
+                        <Text>Amazon UI CLone</Text>
                     </Button>
                 </Content>
             </Container>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    button: {
+        marginTop: 10
+    }
+})

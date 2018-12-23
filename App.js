@@ -14,7 +14,8 @@ import * as fromScreens from './screens';
 const AppStack = createStackNavigator({
   Home: fromScreens.HomeScreen,
   ComponentList: fromScreens.ComponentList,
-  ComponentDetail: fromScreens.ComponentDetail
+  ComponentDetail: fromScreens.ComponentDetail,
+  AmazonUIClone: fromScreens.AmazonUICloneScreen
 })
 
 const AuthStack = createStackNavigator({
