@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-import { StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, TouchableOpacity, Image, TouchableHighlight } from 'react-native';
 import { Container, Content, Left, Body, Right, Header, Icon, Text, View, Button, Item, Input, Card, CardItem } from 'native-base';
 import FAIcon from 'react-native-vector-icons/FontAwesome';
 import Swiper from 'react-native-swiper';
 import RecommendedCardItem from './components/RecommendedCardItem';
 
 export class AmazonUICloneScreen extends Component {
-    static navigationOptions = {
-        header: null
-    }
     render() {
         return (
             <Container>
                 <Header androidStatusBarColor={styles.header.backgroundColor} style={styles.header}>
                     <Left style={{ flexDirection: 'row' }}>
-                        <Icon name="md-menu" style={{ color: 'white', marginRight: 15 }} />
+                        <TouchableOpacity>
+                            <Icon name="md-menu" onPress={() => {
+                                console.log("Pressed")
+                                this.props.navigation.openDrawer()
+                            }} style={{ color: 'white', marginRight: 15 }} />
+                        </TouchableOpacity>
                         <FAIcon name="amazon" size={22} style={{ color: 'white', marginRight: 15, marginTop: 3 }} />
                     </Left>
                     <Body></Body>
@@ -31,7 +33,7 @@ export class AmazonUICloneScreen extends Component {
 
                     <Item regular style={styles.search}>
                         <Icon name="search" />
-                        <Input placeholder="Search"/>
+                        <Input placeholder="Search" />
                     </Item>
                 </View>
 
@@ -44,7 +46,7 @@ export class AmazonUICloneScreen extends Component {
                         </View>
                     </View>
 
-                    <Swiper autoplay style={{ height: 100, marginTop: 10 }}>
+                    <Swiper style={{ height: 100, marginTop: 10 }}>
                         <View style={{ flex: 1 }}>
                             <Image style={styles.swiper_image} source={require('./assets/swiper_2.jpg')} />
                         </View>

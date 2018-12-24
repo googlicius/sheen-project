@@ -7,16 +7,29 @@
  */
 
 // import React from 'react';
-import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createStackNavigator, createSwitchNavigator, createDrawerNavigator } from 'react-navigation';
 import * as fromScreens from './screens';
-// import { mapNavigationStateParamsToProps } from './pure-func';
+import CustomDrawerContent from './screens/AmazonUIClone/components/CustomDrawerContent';
+
+
+const AmazonDrawer = createDrawerNavigator({
+  Home: fromScreens.AmazonUICloneScreen
+}, {
+  drawerPosition: 'left',
+  contentComponent: CustomDrawerContent
+})
 
 const AppStack = createStackNavigator({
   Home: fromScreens.HomeScreen,
   ComponentList: fromScreens.ComponentList,
   ComponentDetail: fromScreens.ComponentDetail,
-  AmazonUIClone: fromScreens.AmazonUICloneScreen
-})
+  AmazonUIClone: {
+    screen: AmazonDrawer,
+    navigationOptions: {
+      header: null
+    }
+  }
+});
 
 const AuthStack = createStackNavigator({
   SignIn: fromScreens.SignInScreen
