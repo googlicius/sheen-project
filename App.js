@@ -35,6 +35,13 @@ const AuthStack = createStackNavigator({
   SignIn: fromScreens.SignInScreen
 });
 
+const AppDrawer = createDrawerNavigator({
+  Home: fromScreens.HomeScreen,
+}, {
+  drawerPosition: 'left',
+  contentComponent: CustomDrawerContent
+});
+
 export default createAppContainer(createSwitchNavigator({
   App: AppStack,
   Auth: AuthStack,

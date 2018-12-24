@@ -24,6 +24,10 @@ export class HomeScreen extends Component {
                     <Button block success onPress={() => this.props.navigation.navigate('AmazonUIClone')} style={{ ...styles.button, backgroundColor: "#3a455c" }}>
                         <Text>Amazon UI CLone</Text>
                     </Button>
+
+                    <Button block dark onPress={() => this.props.navigation.openDrawer()} style={{ ...styles.button }}>
+                        <Text>Open Drawer</Text>
+                    </Button>
                 </Content>
             </Container>
         )
